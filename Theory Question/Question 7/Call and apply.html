@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <body>
+         <script>
+            var p = {
+               q: "Hello"
+            }
+            function showResult(v) {
+               document.write(this.q + " " + v);
+            }
+            showResult.call(p, "Amit"); // one or more objects as argument
+            showResult.apply(p, ["World"]); // array as the second argument
+         </script>
+      </body>
+   </head>
+</html>
+
+//output:- Hello AmitHello World
